@@ -38,13 +38,13 @@ public class LocaleApplyDO extends BaseDO {
     /**
      * 申请的备注
      */
-    @Column(name = "remark", length = 32)
+    @Column(name = "remark", length =256)
     private String remark;
 
     /**
      * 申请的附件
      */
-    @Column(name = "document", length = 32)
+    @Column(name = "document",columnDefinition="text", length = 32)
     private String document;
 
     /**
@@ -94,6 +94,13 @@ public class LocaleApplyDO extends BaseDO {
      */
     @Column(name = "locale_apply_id", length = 32, updatable = false)
     private String localeApplyId;
+
+
+    /**
+     * 组织名
+     */
+    @Column(name = "locale_organization_name", length = 32, updatable = false)
+    private String organizationName;
 
     public static long getSerialVersionUID() {
         return serialVersionUID;
@@ -193,5 +200,13 @@ public class LocaleApplyDO extends BaseDO {
 
     public void setLocaleApplyId(String localeApplyId) {
         this.localeApplyId = localeApplyId;
+    }
+
+    public String getOrganizationName() {
+        return organizationName;
+    }
+
+    public void setOrganizationName(String organizationName) {
+        this.organizationName = organizationName;
     }
 }

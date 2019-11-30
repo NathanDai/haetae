@@ -42,6 +42,14 @@ public interface LocaleAreaManager {
     LocaleAreaBO update(LocaleAreaRequest localeAreaRequest);
 
     /**
+     * 取消场地占用
+     *
+     * @param localeAreaId
+     * @return
+     */
+    LocaleAreaBO cancel(String localeAreaId);
+
+    /**
      * 校验场地是否被占用
      *
      * @param localeId
