@@ -17,6 +17,7 @@ maven
 Java 1.8
 Spring boot
 Mysql
+Mysql
 ```
 
 ### 1.3 开发人员
